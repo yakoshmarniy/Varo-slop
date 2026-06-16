@@ -210,9 +210,11 @@ h3 {
 .hero--landing .hero__headline {
   text-transform: uppercase;
   text-align: center;
-  font-size: clamp(52px, 15vw, 200px);
-  letter-spacing: 0;
-  line-height: 1;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(64px, 19vw, 248px);
+  letter-spacing: 0.01em;
+  line-height: 0.95;
 }
 
 .hero__headline {
