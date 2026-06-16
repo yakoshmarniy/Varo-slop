@@ -34,17 +34,18 @@ const VERT = /* glsl */ `
       pos.y += uHeight;
     }
 
-    // Gentle lateral sway, like grains caught in a light wind.
-    pos.x += sin(uTime * aSpeed * 0.6 + aPhase * 6.2831) * 0.35;
+    // Slight lateral sway as the grains fall — kept small so the motion
+    // reads clearly as falling, not floating.
+    pos.x += sin(uTime * aSpeed * 0.6 + aPhase * 6.2831) * 0.18;
 
     vec4 mv = modelViewMatrix * vec4(pos, 1.0);
     gl_Position = projectionMatrix * mv;
 
-    vAngle = aAngle + uTime * aSpeed * 0.4;
+    vAngle = aAngle + uTime * aSpeed * 0.7;
     vTone = aTone;
     vDepth = clamp((mv.z + 14.0) / 12.0, 0.0, 1.0);
 
-    gl_PointSize = aScale * uPixelRatio * (95.0 / -mv.z);
+    gl_PointSize = aScale * uPixelRatio * (120.0 / -mv.z);
   }
 `;
 
@@ -62,18 +63,20 @@ const FRAG = /* glsl */ `
     float c = cos(vAngle);
     uv = mat2(c, -s, s, c) * uv;
 
-    // Stretch into a grain-shaped ellipse.
-    uv.x /= 0.42;
+    // Stretch into a slender, pointed rice-grain shape.
+    uv.x /= 0.34;
     float d = length(uv);
-    float grain = smoothstep(0.5, 0.16, d);
+    float grain = smoothstep(0.5, 0.30, d);
     if (grain <= 0.001) discard;
 
-    // Warm golden palette, slightly varied per grain.
-    vec3 deep = vec3(0.78, 0.55, 0.20);
-    vec3 light = vec3(0.95, 0.86, 0.58);
-    vec3 color = mix(deep, light, vTone);
+    // Pale, milled-rice palette with a faint warm tint, plus a soft
+    // highlight down the length of the grain so it reads as a solid kernel.
+    vec3 cream = vec3(0.97, 0.94, 0.86);
+    vec3 husk = vec3(0.86, 0.78, 0.55);
+    vec3 color = mix(husk, cream, vTone);
+    color += (1.0 - smoothstep(0.0, 0.22, abs(uv.x))) * 0.10;
 
-    float alpha = grain * mix(0.10, 0.62, vDepth);
+    float alpha = grain * mix(0.55, 0.97, vDepth);
     gl_FragColor = vec4(color, alpha);
   }
 `;
@@ -94,7 +97,7 @@ function buildField(canvas) {
   const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
   camera.position.z = 12;
 
-  const COUNT = window.innerWidth < 760 ? 240 : 520;
+  const COUNT = window.innerWidth < 760 ? 320 : 700;
   const HEIGHT = 30;
   const WIDTH = 40;
   const DEPTH = 18;
@@ -110,8 +113,8 @@ function buildField(canvas) {
     positions[i * 3 + 0] = (Math.random() - 0.5) * WIDTH;
     positions[i * 3 + 1] = (Math.random() - 0.5) * HEIGHT;
     positions[i * 3 + 2] = -Math.random() * DEPTH;
-    scales[i] = 1.4 + Math.random() * 3.2;
-    speeds[i] = 0.5 + Math.random() * 1.4;
+    scales[i] = 2.4 + Math.random() * 4.0;
+    speeds[i] = 1.0 + Math.random() * 2.2;
     phases[i] = Math.random();
     angles[i] = Math.random() * Math.PI * 2;
     tones[i] = Math.random();
@@ -135,7 +138,7 @@ function buildField(canvas) {
     fragmentShader: FRAG,
     transparent: true,
     depthWrite: false,
-    blending: THREE.AdditiveBlending,
+    blending: THREE.NormalBlending,
   });
 
   const points = new THREE.Points(geometry, material);

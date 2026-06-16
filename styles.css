@@ -198,6 +198,23 @@ h3 {
   max-width: 760px;
 }
 
+/* Landing: one big, centered, uppercase title in the middle */
+.hero--landing .hero__body {
+  max-width: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 0 40px;
+}
+
+.hero--landing .hero__headline {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: clamp(52px, 15vw, 200px);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
 .hero__headline {
   font-size: clamp(56px, 13vw, 168px);
   font-weight: 400;
