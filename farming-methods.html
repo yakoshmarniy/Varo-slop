@@ -1,755 +1,307 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <title>
-    Farming Methods | Honomi Rice
-  </title>
-  <link rel="icon" type="image/png" href="assets/Honomi package design.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farming Methods — Honomi Rice</title>
+  <meta name="description" content="How Honomi rice is grown: chemical-free, by hand, in harmony with Bali's ecosystem." />
+  <link rel="icon" type="image/png" href="assets/Honomi package design.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
-  <a class="skip-link" href="#main">
-    Skip to content
-  </a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- HERO -->
-
-  <section class="hero" aria-label="Honomi Farming Methods">
-
-    <video
-      class="hero__video"
-      autoplay
-      muted
-      loop
-      playsinline
-    >
-      <source
-        src="assets/DJI_0225.mp4"
-        type="video/mp4"
-      />
-    </video>
-
-    <div class="hero__overlay"></div>
+  <header class="hero hero--compact">
+    <canvas class="hero__canvas" data-grain-field aria-hidden="true"></canvas>
 
     <div class="container">
-
-      <div class="hero__top hero__top--home">
-
-        <a class="brand__mark brand__mark--home" href="index.html" aria-label="Back to home">
-          <img src="assets/Honomi package design.png" alt="Honomi Rice Logo" />
+      <nav class="hero__nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand__mark" src="assets/Honomi package design.png" alt="" />
+          <span class="brand__name">Honomi</span>
         </a>
+        <div class="hero__menu">
+          <a href="index.html">Home</a>
+          <a href="index.html#buy">Buy</a>
+        </div>
+      </nav>
 
-      </div>
-
-      <div class="hero__title">
-
-        <p class="hero__kicker">
-          Organic Farming
+      <div class="hero__body">
+        <p class="eyebrow">Organic Farming</p>
+        <h1 class="hero__headline" style="font-size:clamp(44px,9vw,108px)">Farming<br />Methods</h1>
+        <p class="hero__sub">
+          Grown without chemicals, in harmony with nature — carefully protecting
+          the balance of the ecosystem at every step.
         </p>
-
-        <h1 class="hero__headline">
-          FARMING METHODS
-        </h1>
-
       </div>
-
     </div>
-
-  </section>
-
-  <!-- MAIN -->
-
-  <main id="main" class="content">
-
-    <div class="container">
-
-      <!-- INTRO -->
-
-      <section class="card card--intro">
-
-        <h2 class="section-title">
-          How We Grow Honomi Rice
-        </h2>
-
-        <p class="intro-text">
-          We grow our rice without chemicals, working in harmony with nature and carefully protecting the balance of the ecosystem. Every step of our farming process is guided by our belief that agriculture should preserve the land, not harm it. 
-        </p>
-
-      </section>
-
-      <!-- FARMING PRINCIPLES -->
-
-      <section
-        class="card"
-        id="offer"
-        aria-labelledby="offer-title"
-      >
-
-        <h2 id="offer-title" class="section-title">
-          Our Farming Principles
-        </h2>
-
-        <div class="offers">
-
-          <!-- CARD 1 -->
-
-          <article
-            class="offer"
-            data-popup="popup1"
-          >
-
-            <img
-              class="offer__img"
-              src="assets/hmm.el5.png"
-              alt="Organic rice farming"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <h3 class="offer__title">
-              Zero Chemical Pesticides
-            </h3>
-
-          </article>
-
-          <!-- CARD 2 -->
-
-          <article
-            class="offer"
-            data-popup="popup2"
-          >
-
-            <img
-              class="offer__img"
-              src="assets/hmm.el6.png"
-              alt="Natural fertilizer methods"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <h3 class="offer__title">
-              No Artificial Fertilizers
-            </h3>
-
-          </article>
-
-          <!-- CARD 3 -->
-
-          <article
-            class="offer"
-            data-popup="popup3"
-          >
-
-            <img
-              class="offer__img"
-              src="assets/hmm.el4.png"
-              alt="Healthy rice ecosystem"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <h3 class="offer__title">
-              No Toxic Herbicides
-            </h3>
-
-          </article>
-
-        </div>
-
-        <!-- POPUPS -->
-
-        <!-- POPUP 1 -->
-
-        <div class="popup" id="popup1">
-
-          <div class="popup__content">
-
-            <button class="popup__close">×</button>
-
-            <video
-              class="popup__media"
-              muted
-              loop
-              playsinline
-              preload="none"
-            >
-              <source
-                src="assets/no pesticide.mp4"
-                type="video/mp4"
-              />
-            </video>
-
-            <div class="popup__overlay">
-
-              <h2>
-                Zero Chemical Pesticides
-              </h2>
-
-              <p>
-                We handmade our pesticides for each predators
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-<!-- POPUP 2 -->
-
-        <div class="popup" id="popup2">
-
-          <div class="popup__content">
-        
-            <button class="popup__close">×</button>
-
-            <video
-              class="popup__media"
-              muted
-              loop
-              playsinline
-              preload="none"
-            >
-              <source
-                src="assets/no artificial fertilizer.mp4"
-                type="video/mp4"
-              />
-            </video>
-
-            <div class="popup__overlay">
-
-              <h2>
-                No Artificial Fertilizers
-              </h2>
-
-              <p>
-                We make fertilizers from organic materials
-              </p>
-
-            </div>
-
-          </div>
-        
-        </div>
-
-        <!-- POPUP 3 -->
-
-        <div class="popup" id="popup3">
-
-          <div class="popup__content">
-
-            <button class="popup__close">×</button>
-
-<video
-              class="popup__media"
-              muted
-              loop
-              playsinline
-              preload="none"
-            >
-              <source
-                src="assets/no herbcide.mov"
-                type="video/mp4"
-              />
-            </video>
-
-            <div class="popup__overlay">
-
-              <h2>
-                No Toxic Herbicides
-              </h2>
-
-              <p>
-                We cut weeds one by one without using chemicals that destroy the ecosystem
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- EXTRA SECTION -->
-
-      <section class="farmer">
-
-        <img
-          class="farmer__image"
-          src="assets/IMG_0381.jpg"
-          alt="Pak Putu"
-          loading="lazy"
-          decoding="async"
-        />
-
-        <div class="farmer__overlay"></div>
-
-        <div class="farmer__content">
-
-          <h2 class="farmer__title">
-            Meet The Farmer
-          </h2>
-
-          <p class="farmer__text">
-            Introducing Pak Putu, the farmer behind Honomi, who carefully grows and takes care of every grain by hand from start to finish.
+  </header>
+
+  <main id="main">
+    <!-- INTRO -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow">Our Approach</p>
+          <h2 class="section__title">How we grow Honomi rice</h2>
+          <p class="lede">
+            We grow our rice without chemicals, working in harmony with nature
+            and carefully protecting the balance of the ecosystem. Every step is
+            guided by our belief that agriculture should preserve the land, not
+            harm it.
           </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- PRINCIPLES -->
+    <section class="section section--tight" id="principles">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">No Shortcuts</p>
+          <h2 class="section__title">Our farming principles</h2>
         </div>
 
-      </section>
-
-			<!-- PROCESS SECTION -->
-
-			<section class="process-section">
-
-				<h2 class="section-title">
-					Our Rice Process
-				</h2>
-
-				<div class="process-flow">
-
-					<!-- STEP 1 -->
-
-					<article class="process-card">
-
-						<video
-							muted
-							loop
-							playsinline
-							preload="metadata"
-						>
-							<source
-								src="assets/plowing.mp4"
-								type="video/mp4"
-							/>
-						</video>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Plowing
-							</h3>
-
-							<p>
-								The soil is plowed to loosen the earth, turn over weeds naturally, and create a flat surface for planting.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 2 -->
-
-					<article class="process-card">
-
-						<img
-							src="assets/seedling.png"
-							alt="Step 2"
-							loading="lazy"
-							decoding="async"
-						/>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Seedling
-							</h3>
-
-							<p>
-								Rice seedlings are first grown in small nursery beds for around 30–50 days before being transplanted by hand into the rice fields.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 3 -->
-
-					<article class="process-card">
-
-						<video
-							muted
-							loop
-							playsinline
-							preload="metadata"
-						>
-							<source
-								src="assets/ezyZip.mp4"
-								type="video/mp4"
-							/>
-						</video>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Planting
-							</h3>
-
-							<p>
-								Each seedling is planted one by one by hand at carefully measured points across the field.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 4 -->
-
-					<article class="process-card">
-
-						<video
-							muted
-							loop
-							playsinline
-							preload="metadata"
-						>
-							<source
-								src="assets/irrigation.mov"
-								type="video/mp4"
-							/>
-						</video>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Irrigation
-							</h3>
-
-							<p>
-								A shallow layer of water is maintained in the paddies to support healthy rice growth, regulate soil temperature, and naturally suppress weeds.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 5 -->
-
-					<article class="process-card">
-
-						<video
-							muted
-							loop
-							playsinline
-							preload="metadata"
-						>
-							<source
-								src="assets/Weeding & fertilizing.mov"
-								type="video/mp4"
-							/>
-						</video>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Weeding & Fertilizing
-							</h3>
-
-							<p>
-								Weeds around the paddies are removed by hand to ensure nutrients go directly to the rice plants. Natural fertilizers are applied to support healthy growth.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 6 -->
-
-					<article class="process-card">
-
-						<img
-							src="assets/pest.png"
-							alt="Step 6"
-							loading="lazy"
-							decoding="async"
-						/>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Pest Control
-							</h3>
-
-							<p>
-								Instead of using chemicals, Pak Putu creates handmade tools and works alongside nature, including allowing owls to live near the fields, to gently drive pests away without harming other living creatures.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 7 -->
-
-					<article class="process-card">
-
-						<video
-							muted
-							loop
-							playsinline
-							preload="metadata"
-						>
-							<source
-								src="assets/Harvesting.mov"
-								type="video/mp4"
-							/>
-						</video>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Harvesting
-							</h3>
-
-							<p>
-								Once the rice plants turn golden and fully mature, the rice is carefully harvested.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 8 -->
-
-					<article class="process-card">
-
-						<img
-							src="assets/drying.png"
-							alt="Step 8"
-							loading="lazy"
-							decoding="async"
-						/>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Drying
-							</h3>
-
-							<p>
-								After harvesting, the rice is dried either naturally under the sun or with drying machines until it reaches the ideal moisture level to preserve quality and prevent spoilage.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 9 -->
-
-					<article class="process-card">
-
-						<video
-							muted
-							loop
-							playsinline
-							preload="metadata"
-						>
-							<source
-								src="assets/Milling.mov"
-								type="video/mp4"
-							/>
-						</video>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Milling
-							</h3>
-
-							<p>
-								The rice is milled to remove the outer husk while preserving the flavor of each grain.
-							</p>
-
-						</div>
-
-					</article>
-
-					<div class="process-arrow">→</div>
-
-					<!-- STEP 10 -->
-
-					<article class="process-card">
-
-						<img
-							src="assets/Honomi package design.png"
-							alt="Step 10"
-							loading="lazy"
-							decoding="async"
-						/>
-
-						<div class="process-card__overlay">
-
-							<h3>
-								Packaging & Sealing
-							</h3>
-
-							<p>
-								Each package is carefully filled, sealed, and prepared by hand to ensure freshness and quality before reaching customers.
-							</p>
-
-						</div>
-
-					</article>
-
-				</div>
-
-			</section>
-
-      <!-- BACK BUTTON -->
-
-      <section class="card card--intro">
-
-        <a class="learn-btn" href="index.html">
-          ← Back to Home
-        </a>
-
-      </section>
-
-      <!-- FOOTER -->
-
-      <footer class="footer">
-
-        <small>
-          © <span id="year"></span> Honomi Rice
-        </small>
-
-      </footer>
-
+        <div class="cards">
+          <article class="principle" data-popup="popup1">
+            <span class="principle__index">01</span>
+            <img class="principle__img" src="assets/hmm.el5.png" alt="" loading="lazy" decoding="async" />
+            <h3>Zero chemical pesticides</h3>
+            <p class="principle__hint">Watch how →</p>
+          </article>
+
+          <article class="principle" data-popup="popup2">
+            <span class="principle__index">02</span>
+            <img class="principle__img" src="assets/hmm.el6.png" alt="" loading="lazy" decoding="async" />
+            <h3>No artificial fertilizers</h3>
+            <p class="principle__hint">Watch how →</p>
+          </article>
+
+          <article class="principle" data-popup="popup3">
+            <span class="principle__index">03</span>
+            <img class="principle__img" src="assets/hmm.el4.png" alt="" loading="lazy" decoding="async" />
+            <h3>No toxic herbicides</h3>
+            <p class="principle__hint">Watch how →</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPUPS -->
+    <div class="popup" id="popup1">
+      <div class="popup__content">
+        <button class="popup__close" aria-label="Close">×</button>
+        <video class="popup__media" muted loop playsinline preload="none">
+          <source src="assets/no pesticide.mp4" type="video/mp4" />
+        </video>
+        <div class="popup__overlay">
+          <h2>Zero chemical pesticides</h2>
+          <p>We handmake our pesticides for each predator.</p>
+        </div>
+      </div>
     </div>
 
+    <div class="popup" id="popup2">
+      <div class="popup__content">
+        <button class="popup__close" aria-label="Close">×</button>
+        <video class="popup__media" muted loop playsinline preload="none">
+          <source src="assets/no artificial fertilizer.mp4" type="video/mp4" />
+        </video>
+        <div class="popup__overlay">
+          <h2>No artificial fertilizers</h2>
+          <p>We make fertilizers from organic materials.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup3">
+      <div class="popup__content">
+        <button class="popup__close" aria-label="Close">×</button>
+        <video class="popup__media" muted loop playsinline preload="none">
+          <source src="assets/no herbcide.mov" type="video/mp4" />
+        </video>
+        <div class="popup__overlay">
+          <h2>No toxic herbicides</h2>
+          <p>We cut weeds one by one without chemicals that destroy the ecosystem.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FARMER -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="farmer">
+          <img src="assets/IMG_0381.jpg" alt="Pak Putu, the Honomi farmer" loading="lazy" decoding="async" />
+          <div class="farmer__content">
+            <h2>Meet the farmer</h2>
+            <p>
+              Introducing Pak Putu, the farmer behind Honomi, who carefully grows
+              and tends every grain by hand from start to finish.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Field to Package</p>
+          <h2 class="section__title">Our rice process</h2>
+        </div>
+
+        <div class="process">
+          <article class="step">
+            <span class="step__num">01</span>
+            <video muted loop playsinline preload="metadata"><source src="assets/plowing.mp4" type="video/mp4" /></video>
+            <div class="step__body">
+              <h3>Plowing</h3>
+              <p>The soil is plowed to loosen the earth, turn over weeds naturally, and create a flat surface for planting.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">02</span>
+            <img src="assets/seedling.png" alt="" loading="lazy" decoding="async" />
+            <div class="step__body">
+              <h3>Seedling</h3>
+              <p>Seedlings are grown in nursery beds for around 30–50 days before being transplanted by hand.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">03</span>
+            <video muted loop playsinline preload="metadata"><source src="assets/ezyZip.mp4" type="video/mp4" /></video>
+            <div class="step__body">
+              <h3>Planting</h3>
+              <p>Each seedling is planted one by one by hand at carefully measured points across the field.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">04</span>
+            <video muted loop playsinline preload="metadata"><source src="assets/irrigation.mov" type="video/mp4" /></video>
+            <div class="step__body">
+              <h3>Irrigation</h3>
+              <p>A shallow layer of water supports healthy growth, regulates soil temperature, and naturally suppresses weeds.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">05</span>
+            <video muted loop playsinline preload="metadata"><source src="assets/Weeding & fertilizing.mov" type="video/mp4" /></video>
+            <div class="step__body">
+              <h3>Weeding &amp; fertilizing</h3>
+              <p>Weeds are removed by hand so nutrients go to the rice. Natural fertilizers support healthy growth.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">06</span>
+            <img src="assets/pest.png" alt="" loading="lazy" decoding="async" />
+            <div class="step__body">
+              <h3>Pest control</h3>
+              <p>Pak Putu makes handmade tools and works with nature — even welcoming owls — to drive pests away without harm.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">07</span>
+            <video muted loop playsinline preload="metadata"><source src="assets/Harvesting.mov" type="video/mp4" /></video>
+            <div class="step__body">
+              <h3>Harvesting</h3>
+              <p>Once the plants turn golden and fully mature, the rice is carefully harvested.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">08</span>
+            <img src="assets/drying.png" alt="" loading="lazy" decoding="async" />
+            <div class="step__body">
+              <h3>Drying</h3>
+              <p>The rice is dried under the sun or by machine until it reaches the ideal moisture level to preserve quality.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">09</span>
+            <video muted loop playsinline preload="metadata"><source src="assets/Milling.mov" type="video/mp4" /></video>
+            <div class="step__body">
+              <h3>Milling</h3>
+              <p>The rice is milled to remove the outer husk while preserving the flavor of each grain.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step__num">10</span>
+            <img src="assets/Honomi package design.png" alt="" loading="lazy" decoding="async" />
+            <div class="step__body">
+              <h3>Packaging &amp; sealing</h3>
+              <p>Each package is filled, sealed, and prepared by hand to ensure freshness before reaching customers.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Honomi Rice</span>
+      <a href="index.html">← Back to home</a>
+    </div>
+  </footer>
+
   <script>
-    document.getElementById("year").textContent =
-      String(new Date().getFullYear());
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
-<script>
+  <script>
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const firstFrameTime = 0.01;
 
-  const offers = document.querySelectorAll('.offer');
-  const popups = document.querySelectorAll('.popup');
-  const closeButtons = document.querySelectorAll('.popup__close');
-  const processVideos = document.querySelectorAll('.process-card video');
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const firstFrameTime = 0.01;
-
-  const playVideo = (video) => {
-    if(!video || prefersReducedMotion.matches){
-      return;
-    }
-
-    video.play().catch(() => {});
-  };
-
-  const pauseVideo = (video) => {
-    if(!video){
-      return;
-    }
-
-    video.pause();
-    video.currentTime = 0;
-  };
-
-  const showFirstFrame = (video) => {
-    const seekToFirstFrame = () => {
-      video.currentTime = Math.min(firstFrameTime, video.duration || firstFrameTime);
+    const playVideo = (video) => {
+      if (!video || prefersReducedMotion.matches) return;
+      video.play().catch(() => {});
+    };
+    const showFirstFrame = (video) => {
+      const seek = () => { video.currentTime = Math.min(firstFrameTime, video.duration || firstFrameTime); };
+      if (video.readyState >= 1) seek();
+      else video.addEventListener("loadedmetadata", seek, { once: true });
     };
 
-    if(video.readyState >= 1){
-      seekToFirstFrame();
-      return;
-    }
-
-    video.addEventListener('loadedmetadata', seekToFirstFrame, { once: true });
-  };
-
-  const pausePopupVideo = (popup) => {
-    pauseVideo(popup.querySelector('video'));
-  };
-
-  processVideos.forEach((video) => {
-
-    const card = video.closest('.process-card');
-
-    showFirstFrame(video);
-
-    card.addEventListener('pointerenter', () => {
-      playVideo(video);
-    });
-
-    card.addEventListener('pointerleave', () => {
-      video.pause();
+    document.querySelectorAll(".step video").forEach((video) => {
+      const card = video.closest(".step");
       showFirstFrame(video);
+      card.addEventListener("pointerenter", () => playVideo(video));
+      card.addEventListener("pointerleave", () => { video.pause(); showFirstFrame(video); });
     });
 
-  });
+    const closePopup = (popup) => {
+      popup.classList.remove("active");
+      const v = popup.querySelector("video");
+      if (v) { v.pause(); v.currentTime = 0; }
+    };
 
-  offers.forEach((offer) => {
-
-    offer.addEventListener('click', () => {
-
-      const popupId = offer.dataset.popup;
-      const popup = document.getElementById(popupId);
-
-      popup.classList.add('active');
-      playVideo(popup.querySelector('video'));
-
+    document.querySelectorAll(".principle").forEach((el) => {
+      el.addEventListener("click", () => {
+        const popup = document.getElementById(el.dataset.popup);
+        popup.classList.add("active");
+        playVideo(popup.querySelector("video"));
+      });
     });
-
-  });
-
-  closeButtons.forEach((button) => {
-
-    button.addEventListener('click', () => {
-
-      const popup = button.closest('.popup');
-
-      popup.classList.remove('active');
-      pausePopupVideo(popup);
-
+    document.querySelectorAll(".popup__close").forEach((btn) => {
+      btn.addEventListener("click", () => closePopup(btn.closest(".popup")));
     });
-
-  });
-
-  popups.forEach((popup) => {
-
-    popup.addEventListener('click', (e) => {
-
-      if(e.target === popup){
-        popup.classList.remove('active');
-        pausePopupVideo(popup);
-      }
-
+    document.querySelectorAll(".popup").forEach((popup) => {
+      popup.addEventListener("click", (e) => { if (e.target === popup) closePopup(popup); });
     });
-
-  });
-
-</script>
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") document.querySelectorAll(".popup.active").forEach(closePopup);
+    });
+  </script>
+  <script type="module" src="hero.js"></script>
 </body>
 </html>

@@ -1,68 +1,25 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <title>
-    Coming Soon!
-  </title>
-  <link rel="icon" type="image/png" href="assets/Honomi package design.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeliBali — Coming Soon | Honomi Rice</title>
+  <link rel="icon" type="image/png" href="assets/Honomi package design.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
-  <a class="skip-link" href="#main">
-    Skip to content
-  </a>
-
-  <!-- HERO -->
-
-  <section class="hero" aria-label="Honomi Farming Methods">
-
-    <video
-      class="hero__video"
-      autoplay
-      muted
-      loop
-      playsinline
-    >
-      <source
-        src="assets/DJI_0225.mp4"
-        type="video/mp4"
-      />
-    </video>
-
-    <div class="hero__overlay"></div>
-
-    <div class="container">
-
-      <div class="hero__top hero__top--home">
-
-        <a class="brand__mark brand__mark--home" href="index.html" aria-label="Back to home">
-          <img src="assets/Honomi package design.png" alt="Honomi Rice Logo" />
-        </a>
-
-      </div>
-
-      <div class="hero__title">
-
-        <p class="hero__kicker">
-          Deli Bali
-        </p>
-
-        <h1 class="hero__headline">
-          Coming Soon!
-        </h1>
-
-      </div>
-
+  <main class="coming">
+    <canvas class="coming__canvas hero__canvas" data-grain-field aria-hidden="true"></canvas>
+    <div class="coming__inner">
+      <a class="brand" href="index.html" style="justify-content:center;margin-bottom:28px">
+        <img class="brand__mark" src="assets/Honomi package design.png" alt="" />
+      </a>
+      <p class="eyebrow" style="color:var(--grain)">DeliBali</p>
+      <h1>Coming Soon</h1>
+      <p>Our DeliBali storefront is being prepared. Check back shortly.</p>
+      <a class="coming__back" href="index.html">← Back to home</a>
     </div>
+  </main>
+  <script type="module" src="hero.js"></script>
 </body>
 </html>
